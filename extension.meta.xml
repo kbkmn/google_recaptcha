@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension id="google_recaptcha" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+
+    <name>Google reCAPTCHA</name>
+
+    <description>Google reCAPTCHA integration for Symphony CMS</description>
+
+    <types>
+        <type>Other</type>
+    </types>
+
+    <repo type="github">https://github.com/kbkmn/google_recaptcha</repo>
+    <url type="issues">https://github.com/kbkmn/google_recaptcha/issues</url>
+
+    <authors>
+        <author>
+            <name github="kbkmn">Илья Журавлёв</name>
+        </author>
+    </authors>
+
+    <releases>
+    	<release version="1.0" date="2017-04-11" min="2.3"/>
+    </releases>
+</extension>
