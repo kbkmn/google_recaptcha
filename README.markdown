@@ -1,4 +1,4 @@
-# Client logo
+# Google reCAPTCHA
 -----------
 
 Version: 1.0
