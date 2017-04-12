@@ -48,16 +48,19 @@ Deferring the render can be achieved by specifying your onload callback function
 
 ```HTML
 <script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
+var recaptchaCallback = function(){
+	$('.g-recaptcha').each(function(index, element){
+		$(element).html('');
+		grecaptcha.render(element, { sitekey: $(element).data('sitekey') });
+	});
+};
 </script>
 ```
 
 2. Insert the Javascript resource, setting the `onload` parameter to the name of your onload callback function and the `render` parameter to `explicit`.
 
 ```HTML
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="async" defer="defer"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&amp;render=explicit" async="async" defer="defer"></script>
 ```
 
 When your callback is executed, you can call the `grecaptcha.render` method from the [Javascript API](https://developers.google.com/recaptcha/docs/display#js_api).
