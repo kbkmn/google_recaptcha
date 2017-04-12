@@ -75,7 +75,7 @@
 		}
 
 		public function frontendParamsResolve($context){
-			$context['params']['google_recaptcha'] = Symphony::Configuration()->get('site_key', 'google_recaptcha');
+			$context['params']['google_recaptcha'] = Symphony::Configuration()->get('site_key', 'google_recaptcha') ?: 'none';
 		}
 
 		public function eventPreSaveFilter($context){
