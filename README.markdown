@@ -40,6 +40,28 @@ Google reCAPTCHA integration for Symphony CMS
 <div class="g-recaptcha" data-sitekey="{$google_recaptcha}"></div>
 ```
 
+### Explicitly render the reCAPTCHA widget
+
+Deferring the render can be achieved by specifying your onload callback function and adding parameters to the JavaScript resource.
+
+1. Specify your onload callback function.  This function will get called when all the dependencies have loaded.
+
+```HTML
+<script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
+```
+
+2. Insert the Javascript resource, setting the `onload` parameter to the name of your onload callback function and the `render` parameter to `explicit`.
+
+```HTML
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+```
+
+When your callback is executed, you can call the `grecaptcha.render` method from the [Javascript API](https://developers.google.com/recaptcha/docs/display#js_api).
+
 
 ## Changelog
 
