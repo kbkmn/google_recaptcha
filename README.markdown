@@ -31,7 +31,7 @@ Google reCAPTCHA integration for Symphony CMS
 5. Paste this snippet before the closing </head> tag on your HTML template:
 
 ```HTML    
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 ```
 
 6. Paste this snippet at the end of the <form> where you want the reCAPTCHA widget to appear:
